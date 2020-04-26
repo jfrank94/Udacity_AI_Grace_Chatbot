@@ -1,0 +1,46 @@
+intents:
+- goodbye
+- greet
+- mood_affirm
+- photos
+- messages
+- mood_deny
+- surprise
+- geetha
+- out_of_scope
+
+slots:
+  group:
+    type: text
+
+entities:
+- group
+
+
+actions:
+- utter_greet
+- utter_did_you_like_it
+- utter_sorry_try_again
+- utter_anything_else
+- utter_goodbye
+- utter_default
+- action_retrieve_messages_or_photos
+
+responses:
+  utter_greet:
+  - text: "Hello, Grace! It's good to meet you, I am the student-powered AI appreciation bot.\nPlease let me know if you would like to receive a message or photo."
+
+  utter_did_you_like_it:
+  - text: "Did you like that? :)"
+
+  utter_sorry_try_again:
+  - text: “Oh no, sorry to hear that Grace! I'll make sure to recalibrate my findings and find you a better one!\nFirst, please let me know if you need a message or photo."
+
+  utter_default:
+  - text: "Sorry, Grace. I'm not able to understand what you just wrote. Please let me know if you'd like to see a photo or a message."
+
+  utter_anything_else:
+  - text: "Are there any more messages or photos you'd like to see, Grace?"
+
+  utter_goodbye:
+  - text: “Goodbye!”
